@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation/Navigation";
+import video from "/src/assets/video/heroBack.mp4";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
         autoPlay
         loop
         muted
-        src="/src/assets/video/heroBack.mp4"
+        src={video}
       >
         <source type="video/mp4" />
       </video>
