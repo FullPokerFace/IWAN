@@ -90,7 +90,7 @@ export const MobileNavItem = ({
 }) => {
   return (
     <a
-      className="block p-3 animate-fadeOut opacity-0 scale-75"
+      className="block p-3 md:animate-fadeOut opacity-0 scale-75"
       style={{ animationDelay: `${delay}ms` }}
       href="#"
       onClick={() => {
