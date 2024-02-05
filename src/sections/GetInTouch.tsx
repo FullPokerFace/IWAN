@@ -3,14 +3,17 @@ import Heading7 from "../components/Headings/Heading7";
 import TextField from "../components/TextField/TextField";
 import { useState } from "react";
 import PrimaryButton from "../components/PrimaryButton/PrimaryButton";
+import Dialog from "../components/Dialog/Dialog";
 
 const GetInTouch = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showDialog, setShowDialog] = useState(false);
 
   return (
     <Section isFullScreen fullSectionClass="relative" id="get-in-touch">
+      <Dialog showDialog={showDialog} setShowDialog={setShowDialog}></Dialog>
       <Heading7>
         Let's Begin <span className="italic font-normal">Together </span>{" "}
       </Heading7>
@@ -61,7 +64,9 @@ const GetInTouch = () => {
               setMessage(e.target.value)
             }
           />
-          <PrimaryButton>Send</PrimaryButton>
+          <PrimaryButton onClick={() => setShowDialog(true)}>
+            Send
+          </PrimaryButton>
         </div>
       </article>
     </Section>
