@@ -3,7 +3,7 @@ import video from "/src/assets/video/heroBack.mp4";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col w-full h-screen overflow-hidden p-6 items-center">
+    <div className="flex flex-col w-full h-screen overflow-hidden p-6 items-center relative">
       <Navigation />
       <h2 className="text-[36px] md:text-[84px] text-white font-playfair font-bold text-center opacity-85 h-full flex items-center max-w-[1200px]">
         Designing Virtual Bridges
@@ -11,7 +11,7 @@ const Hero = () => {
         for Tomorrow's Digital Skyline
       </h2>
       <video
-        className=" brightness-[.5] h-screen w-full object-cover absolute left-1/2 -translate-x-1/2 top-0 -z-10"
+        className=" brightness-[.5] h-screen w-full object-cover absolute left-1/2 -translate-x-1/2 top-0 -z-10 pointer-events-none"
         autoPlay
         loop
         muted

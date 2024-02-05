@@ -56,7 +56,7 @@ const OurWork = () => {
             <img
               src={item.image}
               alt={item.label}
-              className="object-cover hover:animate-zooomIn cursor-pointer"
+              className="object-cover hover:md:animate-zooomIn cursor-pointer"
             />
             <h1 className="text-3xl font-thin">{item.label}</h1>
             <a
