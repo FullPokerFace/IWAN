@@ -3,6 +3,7 @@ import rfsImg from "/src/assets/images/rfs-promo.png";
 import ahcImg from "/src/assets/images/ahc-promo.png";
 import stlmImg from "/src/assets/images/stlm-promo.png";
 import Heading7 from "../components/Headings/Heading7";
+import { nanoid } from "nanoid";
 
 const projects = [
   {
@@ -49,6 +50,7 @@ const OurWork = () => {
       <article className="flex flex-col md:flex-row gap-12 md:gap-36 justify-center my-20 text-slate-950">
         {projects?.map((item, index) => (
           <div
+            key={nanoid()}
             className={`f-full md:w-1/4 text-xs font-thin flex flex-col gap-4 ${
               index % 2 === 0 ? "" : "mt-10"
             }`}

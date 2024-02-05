@@ -1,22 +1,22 @@
-import Footer from "./sections/Footer";
-import GetInTouch from "./sections/GetInTouch";
-import Hero from "./sections/Hero";
-import OurStory from "./sections/OurStory";
-import OurWork from "./sections/OurWork";
-import WhatWeDo from "./sections/WhatWeDo";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import NoPage from "./pages/NoPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 
 function App() {
   return (
-    <>
-      <main className="">
-        <Hero />
-        <OurWork />
-        <WhatWeDo />
-        <OurStory />
-        <GetInTouch />
-        <Footer />
-      </main>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="privacy" element={<PrivacyPolicy />} />
+          <Route path="terms" element={<TermsOfUse />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

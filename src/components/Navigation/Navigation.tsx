@@ -29,22 +29,23 @@ const Navigation = () => {
   return (
     <>
       {/* Desktop */}
-      <section className="md:flex hidden w-full flex-col md:flex-row m-10 text-white font-bolder  text-xs justify-between items-center tracking-[3px]">
-        <div className="flex gap-10 mx-10 flex-row">
+      <section className="md:flex hidden w-full flex-col md:flex-row p-10 text-white font-bolder  text-xs justify-between items-center tracking-[3px] fixed z-40">
+        <div className="flex gap-10 mx-10 flex-row z-10">
           <DesktopNavItem {...menuList[0]} />
           <DesktopNavItem {...menuList[1]} />
         </div>
-        <div className="w-[300px] opacity-75 ">
+        <div className="w-[300px] opacity-75 z-10">
           <Logo />
         </div>
-        <div className="flex gap-10 mx-10 flex-row">
+        <div className="flex gap-10 mx-10 flex-row z-10">
           <DesktopNavItem {...menuList[2]} />
           <DesktopNavItem {...menuList[3]} />
         </div>
+        <div className="min-h-40 absolute left-0 bottom-0 w-full bg-gradient-to-t from-transparent to-slate-950"></div>
       </section>
 
       {/* Mobile */}
-      <section className="flex md:hidden w-full flex-col md:flex-row m-2 text-white font-bolder  text-xs justify-between items-center tracking-[3px] ">
+      <section className="flex md:hidden w-full flex-col md:flex-row text-white font-bolder  text-xs justify-between items-center tracking-[3px] p-6 fixed z-40">
         <div className="w-[300px] opacity-75 md:hidden block">
           <Logo />
         </div>
@@ -68,11 +69,18 @@ const Navigation = () => {
                   key={nanoid()}
                   title={item.title}
                   link={item.link}
+                  setOpen={setOpen}
                   delay={Number(index * 100)}
                 />
               ))}
             </div>
           </article>
+        )}
+        {open && (
+          <div className="min-h-96 absolute left-0 top-0 bottom-0 w-full bg-gradient-to-t from-transparent to-slate-950 -z-10"></div>
+        )}
+        {!open && (
+          <div className="min-h-32 absolute left-0 top-0 bottom-0 w-full bg-gradient-to-t from-transparent to-slate-950 -z-10"></div>
         )}
       </section>
     </>
@@ -83,18 +91,20 @@ export const MobileNavItem = ({
   title,
   link,
   delay,
+  setOpen,
 }: {
   title: string;
   link: string;
   delay: number;
+  setOpen: (arg: boolean) => void;
 }) => {
   return (
     <a
       className="block p-3 animate-fadeOut opacity-0 scale-75"
       style={{ animationDelay: `${delay}ms` }}
-      href="#"
       onClick={() => {
         document.getElementById(link)?.scrollIntoView({ behavior: "smooth" });
+        setOpen(false);
       }}
     >
       {title}

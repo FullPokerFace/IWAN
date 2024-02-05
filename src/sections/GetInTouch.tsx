@@ -18,13 +18,13 @@ const GetInTouch = () => {
         Let's Begin <span className="italic font-normal">Together </span>{" "}
       </Heading7>
       <article className="flex flex-col md:flex-row gap-10 md:gap-36 justify-center my-20 ">
-        <p>
+        <div>
           Ready to embark on your journey?
           <br />
           Reach out to us now!
           <br />
           <br />
-          <a href="email:info@iwan-web.com" className="text-2xl font-thin">
+          <a href="mailto:info@iwan-web.com" className="text-2xl font-thin">
             email: info@iwan-web.com
           </a>
           <br />
@@ -40,7 +40,7 @@ const GetInTouch = () => {
           <br />
           <p className="text-2xl font-thin">10 Croft Ct</p>
           <p className="text-2xl font-thin">Staten Island, NY 10306</p>
-        </p>
+        </div>
 
         <div className="flex flex-col gap-6">
           <TextField

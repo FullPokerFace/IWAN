@@ -1,10 +1,8 @@
-import Navigation from "../components/Navigation/Navigation";
 import video from "/src/assets/video/heroBack.mp4";
 
 const Hero = () => {
   return (
     <div className="flex flex-col w-full h-screen overflow-hidden p-6 items-center relative">
-      <Navigation />
       <h2 className="text-[36px] md:text-[84px] text-white font-playfair font-bold text-center opacity-85 h-full flex items-center max-w-[1200px]">
         Designing Virtual Bridges
         <br />
