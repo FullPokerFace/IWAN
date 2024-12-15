@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
+import AstroPage from "./pages/Astro";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="privacy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<TermsOfUse />} />
+          <Route path="astro" element={<AstroPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
