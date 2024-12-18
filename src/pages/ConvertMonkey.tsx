@@ -4,6 +4,10 @@ import Section from "../components/Section/Section";
 import flag from "../assets/flag.svg";
 import logoWithSlogan from "../assets/logoWithSlogan.svg";
 import PrimaryButton from "../components/PrimaryButton/PrimaryButton";
+import cv_video from "../assets/video/cv_video.mov";
+import cm_screen1 from "../assets/images/cm_screen_1.png";
+import cm_screen2 from "../assets/images/cm_screen_3.png";
+import cm_screen3 from "../assets/images/cm_screen_2.png";
 
 const ConvertMonkeyPage = () => {
   return (
@@ -26,9 +30,18 @@ const ConvertMonkeyPage = () => {
           working with EPS, AI, or other vector formats, we've got you covered.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-            Plugin Demo
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
+          <div className="bg-gray-200 rounded-lg  flex items-center justify-center">
+            <video
+              autoPlay
+              loop
+              muted
+              className="w-full h-full object-cover rounded-lg"
+              controls
+            >
+              <source src={cv_video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <div>
@@ -45,9 +58,9 @@ const ConvertMonkeyPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-sky-900">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mt-8 text-sky-900">
           <div className="bg-gray-100 p-6 rounded-lg">
-            <div className="bg-gray-200 h-40 rounded-lg mb-4"></div>
+            <img src={cm_screen1} className="bg-gray-200 rounded-lg mb-4" />
             <h4 className="font-bold mb-2">Easy Import</h4>
             <p>
               Drag and drop your files and let ConvertMonkey handle the rest
@@ -55,13 +68,13 @@ const ConvertMonkeyPage = () => {
           </div>
 
           <div className="bg-gray-100 p-6 rounded-lg">
-            <div className="bg-gray-200 h-40 rounded-lg mb-4"></div>
+            <img src={cm_screen2} className="bg-gray-200 rounded-lg mb-4" />
             <h4 className="font-bold mb-2">Perfect Conversion</h4>
             <p>Every curve and point preserved exactly as intended</p>
           </div>
 
           <div className="bg-gray-100 p-6 rounded-lg">
-            <div className="bg-gray-200 h-40 rounded-lg mb-4"></div>
+            <img src={cm_screen3} className="bg-gray-200 rounded-lg mb-4" />
             <h4 className="font-bold mb-2">Batch Processing</h4>
             <p>Convert multiple files at once to save time</p>
           </div>
