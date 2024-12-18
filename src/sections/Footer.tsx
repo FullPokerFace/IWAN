@@ -7,6 +7,7 @@ const Footer = () => {
       <div className="flex gap-3">
         <Link to={"/"}>Home</Link>|<Link to={"privacy"}>Privacy policy</Link>|
         <Link to={"terms"}>Terms of use</Link> |
+        <Link to={"convert-monkey"}>ConvertMonkey</Link> |
         <span>IWAN © {new Date().getFullYear()}</span>
       </div>
     </Section>
