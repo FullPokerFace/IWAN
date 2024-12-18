@@ -1,13 +1,15 @@
 import Heading7 from "../components/Headings/Heading7";
-import Heading3 from "../components/Headings/Heading3";
+// import Heading3 from "../components/Headings/Heading3";
 import Section from "../components/Section/Section";
 import flag from "../assets/flag.svg";
 import PrimaryButton from "../components/PrimaryButton/PrimaryButton";
 
-const AstroPage = () => {
+const ConvertMonkeyPage = () => {
   return (
     <Section className="pt-32 md:pt-40">
-      <Heading7>Astro vector file converter</Heading7>
+      <Heading7>
+        ConvertMonkey - Convert & import vector files to Figma
+      </Heading7>
       <div className="flex justify-center items-center gap-2 mt-2">
         Made with love in USA
         <img src={flag} className="cursor-pointer w-5 h-5" />
@@ -17,9 +19,9 @@ const AstroPage = () => {
       <div className="mt-10 max-w-3xl mx-auto">
         <p className="text-lg mb-8">
           Hey there! We're passionate about vector files, and we bet you are
-          too! That's why we created Astro - a powerful Figma plugin that makes
-          importing your vector files a breeze. Whether you're working with EPS,
-          AI, or other vector formats, we've got you covered.
+          too! That's why we created ConvertMonkey - a powerful Figma plugin
+          that makes importing your vector files a breeze. Whether you're
+          working with EPS, AI, or other vector formats, we've got you covered.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -28,7 +30,7 @@ const AstroPage = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4">What Astro Does:</h3>
+            <h3 className="text-xl font-bold mb-4">What ConvertMonkey Does:</h3>
             <ul className="space-y-3">
               <li>
                 🚀 Converts vector files directly into Figma-ready formats
@@ -45,7 +47,9 @@ const AstroPage = () => {
           <div className="bg-gray-100 p-6 rounded-lg">
             <div className="bg-gray-200 h-40 rounded-lg mb-4"></div>
             <h4 className="font-bold mb-2">Easy Import</h4>
-            <p>Drag and drop your files and let Astro handle the rest</p>
+            <p>
+              Drag and drop your files and let ConvertMonkey handle the rest
+            </p>
           </div>
 
           <div className="bg-gray-100 p-6 rounded-lg">
@@ -63,13 +67,13 @@ const AstroPage = () => {
 
         {/* Pricing Section */}
         <div className="mt-20 ">
-          <Heading3>Simple Pricing</Heading3>
+          {/* <Heading3>Simple Pricing</Heading3> */}
           <div className="py-10 rounded-lg max-w-xl ">
-            <div className="text-4xl font-bold text-blue-600">$3/month</div>
+            {/* <div className="text-4xl font-bold text-blue-600">$3/month</div>
             <p className="mt-4 text-lg text-left mb-10">
               Unlimited vector file conversions. Convert unlimited EPS files,
               batch processing, premium support and regular updates.
-            </p>
+            </p> */}
             <PrimaryButton
               href="https://www.figma.com/community/plugin/your-plugin-id"
               target="_blank"
@@ -84,4 +88,4 @@ const AstroPage = () => {
   );
 };
 
-export default AstroPage;
+export default ConvertMonkeyPage;

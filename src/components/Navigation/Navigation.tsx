@@ -41,7 +41,7 @@ const Navigation = () => {
           <DesktopNavItem {...menuList[2]} />
           <DesktopNavItem {...menuList[3]} />
         </div>
-        <div className="min-h-40 absolute left-0 bottom-0 w-full bg-gradient-to-t from-transparent to-slate-950"></div>
+        <div className="min-h-40 absolute left-0 bottom-0 w-full bg-gradient-to-t from-slate-950/80 to-slate-950"></div>
       </section>
 
       {/* Mobile */}
