@@ -2,15 +2,17 @@ import Heading7 from "../components/Headings/Heading7";
 // import Heading3 from "../components/Headings/Heading3";
 import Section from "../components/Section/Section";
 import flag from "../assets/flag.svg";
+import logoWithSlogan from "../assets/logoWithSlogan.svg";
 import PrimaryButton from "../components/PrimaryButton/PrimaryButton";
 
 const ConvertMonkeyPage = () => {
   return (
     <Section className="pt-32 md:pt-40">
+      <img src={logoWithSlogan} className="cursor-pointer w-full h-28 mb-12" />
       <Heading7>
         ConvertMonkey - Convert & import vector files to Figma
       </Heading7>
-      <div className="flex justify-center items-center gap-2 mt-2">
+      <div className="flex justify-center items-center gap-2 my-6">
         Made with love in USA
         <img src={flag} className="cursor-pointer w-5 h-5" />
         by Island Web Apps
