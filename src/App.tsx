@@ -12,9 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="privacy" element={<PrivacyPolicy />} />
-          <Route path="terms" element={<TermsOfUse />} />
-          <Route path="convert-monkey" element={<ConvertMonkey />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfUse />} />
+          <Route path="/convert-monkey" element={<ConvertMonkey />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
